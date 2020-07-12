@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/login">
+
+    <ImageView
+        android:id="@+id/login_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_icon"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/inputs"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/email"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_email"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/inputs"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/password"
+        android:layout_marginBottom="50dp"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password"
+        android:text="Login"
+        android:background="@drawable/button"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_button"
+        android:id="@+id/register_account_link"
+        android:text="Don't have an account. Create new one."
+        android:layout_marginTop="10dp"
+        android:textColor="#f54242"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_account_link"
+        android:text="or Login with"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/text2"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/text2"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/facebook"
+            android:id="@+id/facebook_signin_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/twitter"
+            android:id="@+id/twitter_signin_button"
+            android:layout_toRightOf="@+id/facebook_signin_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/google"
+            android:id="@+id/google_signin_button"
+            android:layout_toRightOf="@+id/twitter_signin_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+</RelativeLayout>
